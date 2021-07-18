@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'idea'
+    id 'io.freefair.lombok' version '6.0.0-m2'
 }
 
 version '1.0-SNAPSHOT'
@@ -48,6 +49,8 @@ dependencies {
     // needed for run time on tests but is included within cucumber-jvm
     testImplementation 'io.cucumber:cucumber-java:4.7.4'
     testImplementation 'io.cucumber:cucumber-junit:4.7.4'
+
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
 }
 
 
@@ -146,6 +149,7 @@ task gradleCommandLineExample() {
 task giphyEnv() {
     group = 'Cucumber ENV'
     description = 'Sets ENV to giphy'
-    doLast { setEnv = '\"https://gfycat.com/\"' }
+    //doLast { setEnv = '\"https://gfycat.com/\"' }
+    doLast { setEnv = "https://gfycat.com/" }
 }
 //</editor-fold>
