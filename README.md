@@ -97,8 +97,11 @@ Usage:
 - Run the project with this command
     ```
     gradlew clean build giphyEnv neatGifTest cucumber
-    ```            
-        
+    ```
+- Run the tests in parallel with this command
+    ```shell
+    ./gradlew clean build runInParallel giphyEnv neatGifTest cucumber
+    ```
 **IntelliJ**
 \
 Create a run configuration. This will allow you to run Scenarios by right clicking them and selecting run in IntelliJ   
